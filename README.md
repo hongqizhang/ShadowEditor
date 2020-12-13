@@ -1,158 +1,349 @@
 # Shadow Editor
 
-Supported Languages: 中文 / [繁體中文](README-tw.md) / [English](README-en.md) / 日本語 / 한국어 / русский / Le français
+English / [中文](README_zh.md) &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://github.com/tengge1/ShadowEditor/releases/download/v0.5.5/ShadowEditor-win32-x64.zip" title="Requires `Visual C++ Redistributable for Visual Studio 2015`">Windows Desktop</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://github.com/tengge1/ShadowEditor/releases/download/v0.5.5/ShadowEditor-linux-x64.zip">Ubuntu Desktop</a> &nbsp;&nbsp; | &nbsp;&nbsp; [Web Demo](https://tengge1.github.io/ShadowEditor-examples/)  
 
-* 名称：Shadow Editor
-* 版本：v0.4.1(开发中)
-* 简介：基于`three.js`的场景编辑器。
-* 源码：[GitHub](https://github.com/tengge1/ShadowEditor) [Gitee](https://gitee.com/tengge1/ShadowEditor) | 文档：[GitHub](https://tengge1.github.io/ShadowEditor/) [Gitee](https://tengge1.gitee.io/shadoweditor/) | 示例：[GitHub](https://tengge1.github.io/ShadowEditor-examples/) [Gitee](http://tengge1.gitee.io/shadoweditor-examples/) | 视频：[微博](https://weibo.com/tv/v/IjIn9AyvX?fid=1034:4446986821107725) [Bilibili](https://www.bilibili.com/video/av78428475?from=search&seid=9203731141485399611) | 资源：[百度云](https://pan.baidu.com/s/1IxJVM6fFLoIAJG-GKHjVTA)
-* 技术栈：`html`、`css`、`javascript`、`rollup`、`react.js`、`webgl`、`three.js`、`asp.net`。
-* 如果对您有帮助，请[【捐赠】](https://gitee.com/tengge1/ShadowEditor)支持项目发展，谢谢。
+[![image](https://img.shields.io/github/stars/tengge1/ShadowEditor)](https://github.com/tengge1/ShadowEditor/stargazers)
+[![image](https://img.shields.io/github/forks/tengge1/ShadowEditor)](https://github.com/tengge1/ShadowEditor/network/members)
+[![image](https://img.shields.io/github/issues/tengge1/ShadowEditor)](https://github.com/tengge1/ShadowEditor/issues)
+![image](https://img.shields.io/github/languages/top/tengge1/ShadowEditor)
+![image](https://img.shields.io/github/commit-activity/w/tengge1/ShadowEditor)
+[![image](https://img.shields.io/github/license/tengge1/ShadowEditor)](https://github.com/tengge1/ShadowEditor/blob/master/LICENSE)
+[![image](https://travis-ci.org/tengge1/ShadowEditor.svg?branch=master)](https://travis-ci.org/github/tengge1/ShadowEditor)
 
-## v0.4.1即将更新
+* Name: Shadow Editor
+* Version: v0.6.0 (Coming Soon)
+* Description: Cross-platform 3D scene editor based on three.js, golang and mongodb.
+* Source: [GitHub](https://github.com/tengge1/ShadowEditor) [Gitee](https://gitee.com/tengge1/ShadowEditor) | Document: [Gitee](https://gitee.com/tengge1/ShadowEditor/wikis/pages) | Demo: [GitHub](https://tengge1.github.io/ShadowEditor-examples/) [Gitee](http://tengge1.gitee.io/shadoweditor-examples/) | Video: [Weibo](https://weibo.com/tv/v/IjIn9AyvX?fid=1034:4446986821107725) [Bilibili](https://www.bilibili.com/video/av78428475?from=search&seid=9203731141485399611) | Assets: [BaiduNetdisk(rfja)](https://pan.baidu.com/s/1BYLPyHJuc2r0bS9Te3SRjA)
+* Technology Stack: html, css, javascript, rollup, react.js, webgl, three.js, golang, mongodb, nodejs, electron, protocol buffers.
+* If helpful to you, please [DOnate](https://gitee.com/tengge1/ShadowEditor) to support us. thank you!
 
-1. 新增字体转换器，可以`.ttf`字体文件转换成`.json`文件。
-2. 修复不缩放文字保存重新载入，无法修改文字的bug。
-3. `Web.config`增加说明：
-    * customErrors: 远程显示服务端错误，正式部署建议改成RemoteOnly。
-    * directoryBrowse: 允许目录浏览，正式部署建议改成false。
-    * mimeMap: 允许下载任意类型文件，正式部署建议改成所需类型文件。
-    * Access-Control-Allow-Origin: 允许跨域，不跨域的话建议去掉。
-4. `Web.config`中增加`.json`的`MIME-Type`，避免去掉`.*`和`.`的`MIME-Type`后，由于部分iis缺少`.json`的`MIME-Type`导致整个后端报500错误。
-5. 禁用资源、上传、备份目录的执行权限。
-6. 修复添加不缩放文字，点击关闭按钮无法关闭窗口的bug。
+<img src="https://gitee.com/tengge1/ShadowEditor/raw/master/images/scene20200503_en.jpg" />  
 
-## v0.4.0更新【[更新日志](docs-dev/update/UpdateLog.md)】
+## v0.6.0 is Coming Soon
 
-* 发布日期：2019年12月29日
-* 更新日志：
 
-1. 新增距离测量工具。
-2. 新增导出场景到JSON文件功能。
-3. 新增导出场景到Collada文件功能。
-4. 新增导出场景到OBJ文件功能。
-5. 新增导出场景到PLY文件功能。
-6. 新增导出场景到STL文件功能。
-7. 修复标注对话框点击关闭，然后点击确定，报错的bug。
-8. 修复播放MMD动画报错的bug。
-9. 编辑场景，新增载入历史版本场景功能。
-10. 工具菜单，新增一键备份MongoDB数据库功能。
 
-## 项目截图
+## v0.5.10 has Released
 
-![image](images/scene20190825.png)
+* Release Date: October 17, 2020
+* Update Logs:
 
-## 主要功能
+1. Remove all GIS related features, and no longer provide GIS in the open source version in the future.
 
-1. 基于three.js/WebGL的3D场景在线编辑器，服务端使用`MongoDB`保存动画、音频、类别、角色、贴图、材质、网格模型、粒子、预设体、场景数据。
-2. 内置几何体：平面、正方体、圆、圆柱体、球体、二十面体、轮胎、纽结、茶壶、酒杯、精灵、文本；线段、CatmullRom曲线、二次贝塞尔曲线、三次贝塞尔曲线、椭圆曲线。
-3. 内置光源：环境光、平行光、点光源、聚光灯、半球光、矩形光。
-4. 支持多种不同3D格式模型和动画导入。支持`3ds`、`3mf`、`amf`、`assimp`(anim)、`awd`、`babylon`、`binary`、`bvh`(anim)、`collada`、`ctm`、`draco`、`fbx`(anim)、`gcode`、`gltf`(anim)、`js`(anim)、`json`(anim)、`kmz`、`lmesh`(anim)、`md2`、`mmd`(anim)、`nrrd`、`obj`、`pcd`、`pdb`、`ply`、`prwm`、`sea3d`(anim)、`stl`、`vrm`、`vrml`、`vtk`、`x` 31种3D文件格式，带`anim`的表示支持动画。多种3D文件同时支持`json`和二进制格式。`mmd`文件同时支持`pmd`和`pmx`格式，支持`vmd`格式的模型和相机动画。它也是唯一支持`lmesh`(lolking网站lol模型)的编辑器。
-5. 内置材质：线条材质、虚线材质、基本材质、深度材质、法向量材质、兰伯特材质、冯氏材质、点云材质、标准材质、物理材质、精灵材质、着色器材质、原始着色器材质。
-6. 支持纹理：颜色纹理、透明纹理、凹凸纹理、法线纹理、位移纹理、镜面纹理、环境纹理、光照纹理、遮挡纹理、自发光纹理。
-7. 支持贴图：图片、立方体贴图、视频贴图。
-8. 内置组件：背景音乐、粒子发射器、天空、火焰、水、烟、布组件。
-9. 可视化修改场景、相机等物体属性，提供40多种不同修改面板。
-10. 在线编辑js脚本、着色器程序，带智能提示。
-11. 自带播放器，实时演示场景动态效果，支持全屏和新窗口播放，可以直接嵌入项目`iframe`中。
-12. 支持补间动画、骨骼动画、粒子动画、mmd动画、lmesh动画（lolking网站lol模型）。
-13. 支持场景、模型、贴图、材质、音频、动画、粒子、预设体、截图、视频管理，支持自定义分类，根据汉字和拼音快速搜索。其中，粒子、预设体暂未实现相应功能。
-14. 支持第一视角控制器、飞行控制器、轨道控制器、指针锁定控制器、轨迹球控制器5种控制器。
-15. 支持点阵化特效、颜色偏移特效、残影特效、背景虚化、快速近似抗锯齿(FXAA)、毛刺特效、半色调特效、全屏抗锯齿(SSAA)、像素特效、可扩展环境光遮挡(SAO)、多重采样抗锯齿(SMAA)、屏幕空间环境光遮蔽(SSAO)、时间抗锯齿(TAA)。
-16. 提供历史记录和日志功能，支持撤销、重做。
-17. 支持导出`gltf`、`obj`、`ply`、`stl`、`Collada`、`DRACO`模型。
-18. 支持`bullet`物理引擎。正方体、圆形、圆柱体、二十面体、酒杯、平面、球体、茶壶、轮胎、纽结和加载的模型都支持刚体组件。支持可视化设置碰撞体形状（正方体、球体）、质量和惯性。
-19. 具有平移、旋转、缩放、在物体表面绘制点、线、贴花的工具，实时统计场景种物体、顶点、三角形数量。
-20. 支持场景发布功能，可以将场景发布成静态资源，部署到任何一台服务器上。
-21. 软件内置语言：`中文`、`繁體中文`、`English`、`日本語`、`한국어`、`русский`、`Le français`。
-22. 支持色调旋转(hue-rotate)、饱和度、亮度、高斯模糊(blur)、对比度、灰度、颜色反转(invert)、复古(sepia)滤镜。
-23. 支持版本控制。
-24. 支持截图工具，视频录制工具。
-25. 内置权限管理：组织机构管理、用户管理、角色管理、权限管理、系统初始化、系统重置、注册、登录、修改密码。
+## Feature List
 
-## 使用指南
+- [x] General
+  - [x] Cross-platform
+    - [x] Windows, Linux, Mac
+    - [x] Desktop, Web
+  - [x] Multi-language support
+    - [x] English、中文、繁體中文、日本語、한국어、русский、Le français
+  - [x] Assets management
+    - [x] scene, mesh, texture, material, audio, animation, screenshot, video, typeface
+  - [x] Authority management
+    - [x] organization, user
+    - [x] role, authority
+    - [x] registration, login, password modification
+  - [x] Version management
+    - [x] Scene history and logs
+    - [x] undo, redo, auto saving
+  - [x] Player
+    - [x] play animations in the scene in real time, and can play full screen and in new window
+  - [x] Settings
+    - [x] Display, renderer, helpers, filter, weather, control mode, select mode, add mode, language
+- [x] Small scene editing
+  - [x] Add mesh
+    - [x] 3ds, 3mf, amf, assimp, awd, babylon, binary, bvh, collada, ctm
+    - [x] draco, fbx, gcode, gltf, glb, js, kmz, lmesh, md2, pmd, pmx
+    - [x] nrrd, obj, pcd, pdb, ply, prwm, sea3d, stl, vrm, vrml, vtk, X
+  - [x] Built-in objects
+    - [x] group
+    - [x] plane, cube, circle, cylinder, sphere, icosahedron, torus, torus knot, teapot, lathe
+    - [x] unscaled text, 3D text
+    - [x] line segments, CatmullRom curve, quadratic Bezier curve, cubic Bezier curve, ellipse curve
+    - [x] point marks
+    - [x] arrow helper, axes helper
+    - [x] sprite
+  - [x] Built-in lights
+    - [x] ambient light, directional light, point light, spotlight, hemispherical light, rect area light
+    - [x] point light, hemispherical light, rect area light helper
+  - [x] Built-in components
+    - [x] background music, particle emitter
+    - [x] sky, fire, water, smoke, cloth
+    - [x] berlin terrain, sky sphere
+  - [x] Materials editing
+    - [x] LineBasicMaterial, LineDashedMaterial, MeshBasicMaterial, MeshDepthMaterial, MeshNormalMaterial
+    - [x] MeshLambertMaterial, MeshPhongMaterial, PointsMaterial, MeshStandardMaterial, MeshPhysicalMaterial
+    - [x] SpriteMaterial, ShaderMaterial, RawShaderMaterial
+  - [x] Post-processing
+    - [x] After-image, bokeh, dot screen, FXAA, glitch
+    - [x] halftone, pixel, RGB shift, SAO
+    - [x] SMAA, SSAA
+    - [x] SSAO, TAA
+  - [x] Text editing
+    - [x] javascript editing with intelligence
+    - [x] shader editing
+    - [x] json file editing
+  - [x] Mesh export
+    - [x] gltf、obj、ply、stl、Collada、DRACO
+  - [x] Scene publishment
+    - [x] Publish scene as static resources, and can be embedded in iframe
+  - [x] Examples
+    - [x] Arkanoid, camera, particle, ping pong, shader
+  - [x] General tools
+    - [x] Select, pan, rotate, zoom
+    - [x] Perspective view, front view, side view, top view, wireframe mode
+    - [x] Screenshot, record
+    - [x] Draw point, draw line, draw polygon, spray
+    - [x] Measure distance
+  - [ ] Others
+    - [ ] Bullet physics engine
+    - [ ] Ray tracing rendering, voxel rendering
+    - [ ] UV unwrap
+    - [ ] Automatic pathfinding
+    - [ ] Batch rendering
+    - [ ] Occlusion culling
+    - [ ] Split screen display
+- [ ] Data visualization
+  - [ ] UI
+    - [ ] Panel, tab panel
+    - [ ] Button, radio, checkbox, dropdown, slider
+    - [ ] Data table
+  - [ ] Charts
+    - [ ] Histogram
+    - [ ] Pie chart
+    - [ ] Line chart
+  - [ ] Visualization config
+    - [ ] Layout management
+    - [ ] data source config
+  - [ ] Real-time data
+    - [ ] WebSocket
+    - [ ] Ajax
 
-**该项目仅支持Windows系统，电脑上需要安装.Net Framework 4.5。**
+## Requirements
 
-**兼容火狐和谷歌浏览器，推荐使用最新版谷歌浏览器。**
+1. MongoDB v3.6.8+
+2. Chrome 81.0+ or ​​Firefox 75.0+
 
-1. 安装`NodeJs`，在最外层目录（有`README.md`文件的那个文件），执行以下命令。
+The following is only required when you want to build from source.
+
+1. Golang 1.14.2+
+2. NodeJS 14.1+
+3. gcc 9.3.0+ (`tdm-gcc`, `MinGW-w64` or `MinGW` on Windows, and make sure `gcc` can be accessed through the command line)
+4. git 2.25.1+
+
+**Note:** The version number is for reference only.
+
+## Download and Compile
+
+You can use git to download the source code.
 
 ```bash
-npm install
-npm run build
+git clone https://github.com/tengge1/ShadowEditor.git
 ```
 
-2. 下载`MongoDB`，安装并启动MongoDB服务。MongoDB服务的默认端口为27017。
-
-MongoDB下载地址:https://www.mongodb.com/download-center/community
-
-可以下载zip版本，然后在MongoDB的bin文件夹执行以下命令安装服务，注意修改路径。
+In **China**, `github` is really slow, you can use `gitee` instead.
 
 ```bash
-mongod --dbpath=D:\mongodb\db --logpath=D:\mongodb\log\mongoDB.log --install --serviceName MongoDB
-net start MongoDB
+git clone https://gitee.com/tengge1/ShadowEditor.git
 ```
 
-3. 编辑文件`ShadowEditor.Web/Web.config`，将`27017`修改为你电脑上MongoDB服务的端口。
+### Build on both Windows and Ubuntu
 
-```xml
-<add key="mongo_connection" value="mongodb://127.0.0.1:27017" />
+**Web Version:**
+
+1. If you are in `China`, run `npm run set-proxy` to set golang and nodejs proxy.
+2. Run `npm install` to install nodejs dependencies.
+3. Run `npm run build` to build the server and web.
+4. Edit `build/config.toml`, and modify the mongodb host and port.
+5. Run `npm run start` to launch the server. You can now visit: `http://localhost:2020`.
+
+**Desktop Version:**
+
+1. Download `MongoDB` and unzip it in the `utils/mongodb` folder.
+2. Build web version.
+3. Run `npm run build-desktop` to build a desktop app in the folder `build/desktop`.
+
+### Install as Windows Service
+
+1. Open `PowerShell` or `cmd` in the `build` folder as administrator.
+2. Run `.\ShadowEditor install` to install ShadowEditor as a service.
+3. Run `.\ShadowEditor start` to start ShadowEditor service.
+4. Now you can visit: `http://localhost:2020`.
+5. You can also manage this service in the `Windows Services Manager`.
+
+### Install as Ubuntu Service
+
+1. Edit `./scripts/service_linux/shadoweditor.service`, set the right path.
+2. Run `sudo cp ./scripts/service_linux/shadoweditor.service /etc/systemd/system/`.
+3. Run `sudo systemctl daemon-reload` to reload the service daemon.
+4. Run `sudo systemctl start shadoweditor` to start service.
+5. Run `sudo systemctl enable shadoweditor` to auto start service.
+
+## Command Line Usage
+
+```
+PS E:\github\ShadowEditor\build\> .\ShadowEditor
+ShadowEditor is a 3D scene editor based on three.js, golang and mongodb.
+This application uses mongodb to store data.
+
+Usage:
+  ShadowEditor [command]
+
+Available Commands:
+  debug       Debug service on Windows  
+  help        Help about any command    
+  install     Install service on Windows
+  serve       Start server
+  start       Start service on Windows
+  stop        Stop service on Windows
+  version     Print the version number
+
+Flags:
+      --config string   config file (default "./config.toml")
+  -h, --help            help for ShadowEditor
+
+Use "ShadowEditor [command] --help" for more information about a command.
 ```
 
-4. 使用`Visual Studio 2017`打开项目，生成`ShadowEditor.Web`项目。
+## Development Guide
 
-5. 将`ShadowEditor.Web`部署在iis上即可在浏览器中访问。
+1. Download and install `NodeJs`, `golang`, `MongoDB` and `Visual Studio Code`.
+2. It is recommended to install the following VSCode extensions which may be helpful.
 
-注意：发布网站部署，Web目录外面需要多加一层文件夹，用于存放日志、数据库备份等不能公开的资源。
-
-6. 为了保存各种类型文件能正常下载，会在iis上添加以下两个MIME类型，正式部署请注意安全。
-
-| 文件扩展名 | MIME类型 | 说明 |
-| --------- | -------- | ---- |
-| .* | application/octet-stream | 各种格式后缀文件 |
-| . | application/octet-stream | 无后缀文件 |
-
-7. 编译文档，请安装gitbook。
-
-```bash
-npm install -g gitbook-cli
+```
+ESLint, Go, Shader languages support for VS Code, TOML Language Support.
 ```
 
-然后切换到`docs-dev`目录，安装gitbook插件。
+npm scripts usage:
 
-```bash
-gitbook install
+```
+npm install:            install nodejs dependencies.
+npm run build:          build the server and web client.
+npm run build-server:   build only the server. (For development)
+npm run build-web:      build only the web client. (For development)
+npm run build-desktop:  build the desktoop version.
+npm run dev:            build the web client automatically when files changes.(For development)
+npm run copy:           Copy assets from web folder to build folder.
+npm run start:          start the web server.
+npm run set-proxy:      set golang and nodejs proxy. (In China only)
+npm run unset-proxy:    unset golang and nodejs proxy.
+npm run install-dev:    install golang development tools.
+npm run eslint:         check js files and fix errors automatically.
+npm run clean:          delete the web and desktop builds.
+npm run clear:          delete useless nodejs packages.
 ```
 
-然后切换到上级目录，执行以下命令生成文档。
+## Contributing
 
-```bash
-npm run docs
-```
+<details>
+  <summary>Expand to view details</summary>
 
-## 常见问题
+ShadowEditor is a project for both users and developers. You can contribute and try you idea on this 
+project. No pension, but a lot of fun. To contribute, you should:
 
-1. 上传模型时为什么都是上传失败？
+1. Fork the repository.
+2. Create Feat_xxx branch.
+3. Commit your code.
+4. Create Pull Request.
 
-需要把模型贴图等资源压缩成一个zip包，而且入口文件不能嵌套文件夹。服务端会解压上传的zip包放到`~/Upload/Model`文件下，并在MongoDB `_Mesh`表里添加一条数据。
+**Note:** DO NOT submit large binaries, or the `Pull Request` may be rejected. If required, you can 
+add the files or directories to be ignored to the `.gitignore` file.
 
-2. 如何将多个模型组合在一起？
+</details>
 
-基本几何体都支持多层嵌套。可以添加一个`组`（在几何体菜单中），然后在场景树状图上，将多个模型拖动到`组`上。
+## Frequently Asked Questions
 
-3. 如何开启权限系统？
+<details>
+  <summary>Expand to view details</summary>
 
-打开`ShadowEditor.Web/Web.config`文件，将`EnableAuthority`设置为`true`。默认管理员用户名是`admin`，密码是`123456`。
+1. Failed when upload models.
 
-4. 前端报`asm.js 已被禁用，因为脚本调试程序已连接。请断开调试程序的连接，以启用 asm.js。`的错误。
+You need to compress the model assets into a `zip` file, and the entry file cannot be nested in a folder. The server will decompress and put it in the `./build/public/Upload/Model` folder, and add a record in the MongoDB `_Mesh` collection.
 
-**完整错误**：asm.js 已被禁用，因为脚本调试程序已连接。请断开调试程序的连接，以启用 asm.js。 ammo.js (1,1) SCRIPT1028: SCRIPT1028: Expected identifier, string or number ShadowEditor.js (3948,8) SCRIPT5009: 'Shadow' is not defined。  
-**解决方法**：腾讯浏览器不支持使用`Emscripten`编译的`ammo.js`（WebAssembly），建议换成谷歌浏览器。  
+2. How to combine multiple models together?
 
-## 相关链接
+Basic geometry supports multiple levels of nesting. You can add a `group` (in the geometry menu), and then drag multiple models onto the `group` in the `Hierachy` Panel.
 
-* Three.js官网：https://threejs.org/
-* LOL模型查看器：https://github.com/tengge1/lol-model-viewer
-* 模型下载1：https://sketchfab.com/3d-models?features=downloadable
-* 模型下载2：https://www.3dpunk.com/work/index.html?category=downloadable
+3. How to enable authority?
+
+Edit `config.toml` and set `authority.enabled` to `true`. The default administrator username is `admin` and the password is `123456`.
+
+4. The brower report `asm.js has been disabled because the script debugger is connected. Please disconnect the debugger to enable asm.js.` Error.
+
+**Complete error**: asm.js has been disabled because the script debugger is connected. Please disconnect the debugger to enable asm.js. ammo.js (1,1) SCRIPT1028: SCRIPT1028: Expected identifier, string or number ShadowEditor.js (3948,8) SCRIPT5009: 'Shadow' is not defined.
+
+**Solution**: Tencent browser does not support `ammo.js` (WebAssembly) compiled with `Emscripten`, it is recommended to use `Chrome` or `Firebox` instead.
+
+5. How can I upgrade from C# to golang version?
+
+The data structure and web client is not changed, just copy `./ShadowEditor.Web/Upload/` folder to
+`build/public/Upload/`.
+
+6. The desktop version cannot be opened.
+
+Windows requires `Visual C++ Redistributable for Visual Studio 2015`. You can install from: https://www.microsoft.com/en-us/download/details.aspx?id=48145  
+If the desktop version cannot be opened, you can view `logs.txt`; if the port conflicts, you can modify the MongoDB and website ports in `resources/app/config.toml`.  
+
+</details>
+
+## License
+
+MIT License
+
+## Open Source Projects
+
+<details>
+  <summary>Expand to view details</summary>
+
+Thanks to the following open source projects.  
+
+https://github.com/golang/go  
+https://github.com/BurntSushi/toml  
+https://github.com/dgrijalva/jwt-go  
+https://github.com/dimfeld/httptreemux  
+https://github.com/inconshreveable/mousetrap  
+https://github.com/json-iterator/go  
+https://github.com/mozillazg/go-pinyin  
+https://github.com/otiai10/copy  
+https://github.com/sirupsen/logrus  
+https://github.com/spf13/cobra  
+https://github.com/spf13/viper  
+https://github.com/urfave/negroni  
+https://go.mongodb.org/mongo-driver  
+  
+https://github.com/facebook/react  
+https://github.com/mrdoob/three.js  
+https://github.com/rollup/rollup  
+https://github.com/babel/babel  
+https://github.com/eslint/eslint  
+https://github.com/rollup/rollup-plugin-babel  
+https://github.com/rollup/rollup-plugin-commonjs  
+https://github.com/rollup/rollup-plugin-json  
+https://github.com/rollup/rollup-plugin-node-resolve  
+https://github.com/egoist/rollup-plugin-postcss  
+https://github.com/rollup/rollup-plugin-replace  
+https://github.com/mjeanroy/rollup-plugin-strip-banner  
+https://github.com/andyearnshaw/rollup-plugin-bundle-worker  
+  
+https://github.com/tweenjs/tween.js  
+https://github.com/JedWatson/classnames  
+https://github.com/d3/d3-dispatch  
+https://github.com/i18next/i18next  
+https://github.com/js-cookie/js-cookie  
+https://github.com/facebook/prop-types  
+https://github.com/codemirror/CodeMirror  
+https://github.com/jquery/esprima  
+https://github.com/tschw/glslprep.js  
+https://github.com/zaach/jsonlint  
+https://github.com/acornjs/acorn  
+https://github.com/kripken/ammo.js  
+https://github.com/dataarts/dat.gui  
+https://github.com/toji/gl-matrix  
+https://github.com/squarefeet/ShaderParticleEngine  
+https://github.com/mrdoob/stats.js  
+https://github.com/mrdoob/texgen.js  
+https://github.com/yomotsu/VolumetricFire  
+https://github.com/jonbretman/amd-to-as6  
+https://github.com/chandlerprall/ThreeCSG  
+</details>
