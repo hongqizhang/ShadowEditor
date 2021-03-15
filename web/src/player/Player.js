@@ -17,6 +17,7 @@ import PlayerAudio from './component/PlayerAudio';
 import PlayerRenderer from './component/PlayerRenderer';
 import PlayerAnimation from './component/PlayerAnimation';
 import PlayerPhysics from './component/PlayerPhysics';
+import WebVR from './component/WebVR';
 import CssUtils from '../utils/CssUtils';
 // import Globe from '../gis/Globe';
 // import Visualization from '../visual/Visualization';
@@ -92,6 +93,7 @@ function Player(container = document.body, options = {}) {
     this.playerRenderer = new PlayerRenderer(this);
     this.animation = new PlayerAnimation(this);
     this.physics = new PlayerPhysics(this);
+    this.webvr = new WebVR(this);
 
     this.isPlaying = false;
     this.clock = new THREE.Clock(false);
@@ -144,12 +146,13 @@ Player.prototype.start = function (sceneData) {
         var promise4 = this.playerRenderer.create(this.scene, this.camera, this.renderer);
         var promise5 = this.animation.create(this.scene, this.camera, this.renderer, obj.animations);
         var promise6 = this.physics.create(this.scene, this.camera, this.renderer);
+        var promise7 = this.webvr.create(this.scene, this.camera, this.renderer);
 
-        Promise.all([promise1, promise2, promise3, promise4, promise5, promise6]).then(() => {
+        Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7]).then(() => {
             this.event.init();
             this.clock.start();
             this.event.start();
-            requestAnimationFrame(this.animate.bind(this));
+            this.renderer.setAnimationLoop(this.animate.bind(this));
         });
     });
 };
@@ -162,6 +165,7 @@ Player.prototype.stop = function () {
         return;
     }
     this.isPlaying = false;
+    this.renderer.setAnimationLoop(null);
 
     this.event.stop();
 
@@ -171,6 +175,7 @@ Player.prototype.stop = function () {
     this.audio.dispose();
     this.animation.dispose();
     this.physics.dispose();
+    this.webvr.dispose();
 
     // if (this.gis) {
     //     this.gis.dispose();
@@ -200,6 +205,7 @@ Player.prototype.initPlayer = function (obj) {
 
     // options
     this.options.enablePhysics = obj.options.enablePhysics;
+    this.options.enableVR = obj.options.enableVR;
 
     // camera
     this.camera = obj.camera;
@@ -274,8 +280,6 @@ Player.prototype.animate = function () {
     if (this.stats) {
         this.stats.end();
     }
-
-    requestAnimationFrame(this.animate.bind(this));
 };
 
 Player.prototype.resize = function () {

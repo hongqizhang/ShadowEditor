@@ -25,4 +25,4 @@ public_dir = "./public"                     # The directory that contains index.
 log_dir = "./logs"                          # The directory that contains log files. Need write authority.
 
 [log]
-file = "./logs/ShadowServer.txt"
+file = "./logs/ShadowEditor.txt"
